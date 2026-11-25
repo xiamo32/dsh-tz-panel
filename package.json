@@ -1,0 +1,43 @@
+{
+  "name": "dsh-tz-panel",
+  "version": "0.1.0",
+  "description": "Visual time zone switcher for DeepSeek Harness: a Settings page that lists every Windows time zone with live clocks and switches the machine zone through one UAC prompt.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "timezone",
+    "windows"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node scripts/smoke.mjs && node scripts/smoke-client.mjs"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiamo32/dsh-tz-panel.git"
+  }
+}

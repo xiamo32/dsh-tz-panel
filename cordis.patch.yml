@@ -1,0 +1,16 @@
+# ============================================================================
+# dsh-tz-panel — DSH bundle patch
+# ============================================================================
+# A bundle patch is the "mount declaration" DSH reads when it composes a
+# profile: every package listed in package.json's dsh.profile.bundles contributes
+# one layer, and this file inserts the plugin as a Loader entry so its host half
+# is mounted (and, because dsh.client is declared, its web half is served).
+#
+# Install:
+#   dsh plugin --profile <profile> add github:<owner>/dsh-tz-panel
+#   dsh plugin --profile <profile> add link:<abs path to this directory>
+# ============================================================================
+
+- insert:
+    - id: dsh-tz-panel
+      name: dsh-tz-panel
